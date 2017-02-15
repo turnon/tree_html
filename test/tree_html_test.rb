@@ -7,7 +7,7 @@ class TreeHtmlTest < Minitest::Test
     include TreeHtml
 
     def label_for_tree_html
-      "#{@word.upcase} (#{@word})"
+      "<span class='highlight'>#{@word.upcase}</span> (#{@word})"
     end
 
     def children_for_tree_html
@@ -46,7 +46,7 @@ class TreeHtmlTest < Minitest::Test
 
   def test_it_does_something_useful
     File.open(TmpFile, 'w') do |f|
-      f.puts @a.tree_html_full
+      f.puts @a.tree_html_full '.highlight{color: blue;}'
     end
   end
 end

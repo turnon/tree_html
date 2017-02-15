@@ -5,14 +5,14 @@ module TreeHtml
     "<ul class='tree'>#{li}</ul>"
   end
 
-  def tree_html_full
-    "<!DOCTYPE HTML><html><head><meta charset='utf-8'/><style>#{css}</style></head><body>#{tree_html}</body></html>"
+  def tree_html_full custom_css=''
+    "<!DOCTYPE HTML><html><head><meta charset='utf-8'/><style>#{css(custom_css)}</style></head><body>#{tree_html}</body></html>"
   end
 
   Css = File.expand_path('../tree_html/tree_html.css', __FILE__)
 
-  def css
-    File.read Css
+  def css addition=''
+    File.read(Css) + addition
   end
 
   protected
