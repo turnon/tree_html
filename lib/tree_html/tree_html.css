@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tree ul {
+    margin-left: 20px;
+}
+
+.tree li {
+    list-style-type: none;
+    margin: 10px;
+    position: relative;
+}
+
+.tree li::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 20px;
+    height: 15px;
+}
+
+.tree li::after {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    width: 20px;
+    height: 100%;
+}
+
+.tree li:last-child::after {
+    display: none;
+}
+
+ul.tree>li:first-child::before {
+    display: none;
+}
+
+.tree li a {
+    padding: 2px 5px;
+}
+
+.tree li a:hover, .tree li a:hover+ul li a,
+.tree li a:focus, .tree li a:focus+ul li a {
+    background: gray;
+}
+
+input[type='checkbox'] {
+  margin-left: 5px;
+}
+
+input[type='checkbox']:checked ~ ul {
+  display: none
+}
