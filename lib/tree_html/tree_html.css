@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Dejavu Sans Mono', 'Arial', sans-serif;
 }
 
 * {
@@ -7,58 +7,82 @@ body {
     padding: 0;
 }
 
-.tree ul {
-    margin-left: 20px;
+.tree-html ul {
+    margin-left: 15px;
 }
 
-.tree li {
+.tree-html li {
     list-style-type: none;
     margin: 10px;
     position: relative;
 }
 
-.tree li::before {
+.tree-html li::before {
     content: "";
     position: absolute;
     top: -7px;
-    left: -20px;
-    border-left: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    width: 20px;
+    left: -15px;
+    border-left: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+    width: 15px;
     height: 15px;
 }
 
-.tree li::after {
+.tree-html li::after {
     position: absolute;
     content: "";
     top: 8px;
-    left: -20px;
-    border-left: 1px solid #ccc;
-    width: 20px;
+    left: -15px;
+    border-left: 1px dotted #ccc;
+    width: 15px;
     height: 100%;
 }
 
-.tree li:last-child::after {
+.tree-html li:last-child::after {
     display: none;
 }
 
-ul.tree>li:first-child::before {
+ul.tree-html>li:first-child::before {
     display: none;
 }
 
-.tree li a {
+.tree-html li a {
     padding: 2px 5px;
 }
 
-.tree li a:hover, .tree li a:hover+ul li a,
-.tree li a:focus, .tree li a:focus+ul li a {
+.tree-html li a:hover, .tree-html li a:hover+ul li a,
+.tree-html li a:focus, .tree-html li a:focus+ul li a {
     background: gray;
+}
+
+.tree-html label {
+  margin: 0 0 0 5px;
+  border: 1px solid #ccc;
+  width: .6em;
+  height: .6em;
+  display: inline-block;
+  line-height: .65;
+}
+
+.tree-html label::before {
+  color: #ccc;
+  font-family: serif;
+  margin-left: 0.02em;
 }
 
 input[type='checkbox'] {
   margin-left: 5px;
+  display: none
 }
 
 input[type='checkbox']:checked ~ ul {
   display: none
+}
+
+input[type="checkbox"] + label::before {
+  content: '-';
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: '+';
 }

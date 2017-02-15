@@ -2,7 +2,7 @@ require "tree_html/version"
 
 module TreeHtml
   def tree_html
-    "<ul class='tree'>#{li}</ul>"
+    "<ul class='tree-html'>#{li}</ul>"
   end
 
   def tree_html_full custom_css=''
@@ -22,7 +22,7 @@ module TreeHtml
   end
 
   def checkbox
-    children_for_tree_html.empty? ? '' : "<input type='checkbox'>"
+    children_for_tree_html.empty? ? '' : "<input type='checkbox' id='#{object_id}'><label for='#{object_id}'></label>"
   end
 
   def sub_ul
