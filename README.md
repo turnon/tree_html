@@ -22,5 +22,7 @@ Or install it yourself as:
 
 In Node class, `include TreeHtml`, then implement `label_for_tree_html` and `children_for_tree_html`, then call`tree_html` on node object to get ul/li fragment, or `tree_html_full` to get a html file with pre-defined style.
 
+You may overwrite `css_for_tree_html` to specify your own style.
+
 Or checkout [test/tree_html_test.rb](https://github.com/turnon/tree_html/blob/master/test/tree_html_test.rb) to see how to use.
 

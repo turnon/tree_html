@@ -14,6 +14,10 @@ class TreeHtmlTest < Minitest::Test
       sub_nodes
     end
 
+    def css_for_tree_html
+      '.highlight{color: blue;}'
+    end
+
     def initialize word
       @word = word
     end
@@ -46,7 +50,7 @@ class TreeHtmlTest < Minitest::Test
 
   def test_it_does_something_useful
     File.open(TmpFile, 'w') do |f|
-      f.puts @a.tree_html_full '.highlight{color: blue;}'
+      f.puts @a.tree_html_full
     end
   end
 end
