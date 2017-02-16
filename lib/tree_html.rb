@@ -22,7 +22,7 @@ module TreeHtml
   end
 
   def checkbox
-    children_for_tree_html.empty? ? '' : "<input type='checkbox' id='#{object_id}'><label for='#{object_id}'></label>"
+    children_for_tree_html.empty? ? "<label class='placeholder'></label>" : "<input type='checkbox' id='#{object_id}'><label for='#{object_id}'></label>"
   end
 
   def sub_ul
