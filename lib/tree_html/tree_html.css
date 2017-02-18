@@ -22,7 +22,7 @@ body {
     content: "";
     position: absolute;
     top: -7px;
-    left: -15px;
+    left: -28px;
     border-left: 1px dotted #ccc;
     border-bottom: 1px dotted #ccc;
     width: 15px;
@@ -33,7 +33,7 @@ body {
     position: absolute;
     content: "";
     top: 8px;
-    left: -15px;
+    left: -28px;
     border-left: 1px dotted #ccc;
     width: 15px;
     height: 100%;
