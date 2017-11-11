@@ -1,6 +1,9 @@
 require "tree_html/version"
 
 module TreeHtml
+
+  NO_DATA_IN_A = {}.freeze
+
   def tree_html
     "<ul class='tree-html'>#{li}</ul>"
   end
@@ -18,7 +21,15 @@ module TreeHtml
   protected
 
   def li
-    "<li>#{checkbox}<a>#{label_for_tree_html}</a>#{sub_ul}</li>"
+    "<li>#{checkbox}<a #{data_in_a}>#{label_for_tree_html}</a>#{sub_ul}</li>"
+  end
+
+  def data_in_a
+    data_for_tree_html.map{ |k, v| "data-#{k}='#{v}'" }.join(" ")
+  end
+
+  def data_for_tree_html
+    NO_DATA_IN_A
   end
 
   def checkbox
