@@ -13,14 +13,22 @@ module TreeHtml
   def tree_html_full
     "<!DOCTYPE HTML><html>"\
       "<head><meta charset='utf-8'/><style>#{main_css_for_tree_html + css_for_tree_html}</style></head>"\
-      "<body>#{tree_html}</body>"\
+      "<body>"\
+        "#{tree_html}"\
+        "<script>#{main_js_for_tree_html}</script>"\
+      "</body>"\
     "</html>"
   end
 
   Css = File.expand_path('../tree_html/tree_html.css', __FILE__)
+  Js = File.expand_path('../tree_html/tree_html.js', __FILE__)
 
   def main_css_for_tree_html
     File.read(Css)
+  end
+
+  def main_js_for_tree_html
+    File.read(Js)
   end
 
   protected
