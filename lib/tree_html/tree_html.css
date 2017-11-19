@@ -56,7 +56,9 @@ ul.tree-html>li:first-child::before {
     background-color: #d3d3d3;
 }
 
-a.twinkle {
+.tree-html a.twinkle,
+.tree-html li a.twinkle:hover, .tree-html li a:hover+ul li a.twinkle,
+.tree-html li a.twinkle:focus, .tree-html li a:focus+ul li a.twinkle {
   background-color: #00bcd4;
 }
 
