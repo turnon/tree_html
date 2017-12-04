@@ -20,9 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-In Node class, `include TreeHtml`, then implement `label_for_tree_html` and `children_for_tree_html`, then call`tree_html` on node object to get ul/li fragment, or `tree_html_full` to get a html file with pre-defined style.
+In Node class, `include TreeHtml`, then implement `label_for_tree_html` and `children_for_tree_html`, then call `tree_html` on node object to get ul/li fragment, or `tree_html_full` to get a html file with pre-defined style.
 
-You may overwrite `css_for_tree_html` to specify your own style.
+You may overwrite `data_for_tree_html`, `head_js_for_tree_html`, `body_js_for_tree_html`, `css_for_tree_html` to specify your own style.
+
+In generated html, hover a branch and press `f`/`u` to fold/unfold it's children, press `p`/`n` to jump to it's previous/next sibling branch. You may change these function keys in `body_js_for_tree_html`.
 
 Or checkout [test/tree_html_test.rb](https://github.com/turnon/tree_html/blob/master/test/tree_html_test.rb) to see how to use.
 
