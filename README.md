@@ -28,3 +28,27 @@ In generated html, hover a branch and press `f`/`u` to fold/unfold it's children
 
 Or checkout [test/tree_html_test.rb](https://github.com/turnon/tree_html/blob/master/test/tree_html_test.rb) to see how to use.
 
+## Extending
+
+You may register more handlers for responsing key press. For example, to do something when hovering on any `li` and pressing `r`
+
+```javascript
+TreeHtml.hover_press('r', function(li){
+  // actions
+})
+```
+
+You may also group `li`s with same key under additional `ul`:
+
+```javascript
+var switch = TreeHtmlGroup({
+  name: 'by_whatever_key',
+  key: function get_path(li) {
+    var p = li.querySelector('a').innerText.replace(/* key calculation here */)
+    return '<b>' + p + '</b>'
+  }
+})
+
+switch('by_whatever_key')
+switch('') // switch back
+```
