@@ -7,7 +7,7 @@ module TreeHtml
   BLANK = ''.freeze
   NO_CUSTOM_JS = [].freeze
   Css = File.read File.expand_path('../tree_html/tree_html.css', __FILE__)
-  Js = File.read File.expand_path('../tree_html/tree_html.js', __FILE__)
+  Js = Dir.glob("#{File.expand_path(__dir__)}/tree_html/*.js").map{|f| File.read f }.join(';')
 
   def tree_html
     "<ul class='tree-html'>#{li_for_tree_html}</ul>"
