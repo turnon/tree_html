@@ -22,6 +22,8 @@ Or install it yourself as:
 
 In Node class, `include TreeHtml`, then implement `label_for_tree_html` and `children_for_tree_html`, then call `tree_html` on node object to get ul/li fragment, or `tree_html_full` to get a html file with pre-defined style.
 
+By Default, any object can be leaf, and renders as `to_s`.
+
 You may overwrite `data_for_tree_html`, `head_js_for_tree_html`, `body_js_for_tree_html`, `css_for_tree_html` to specify your own style.
 
 In generated html, hover a branch and press `f`/`u` to fold/unfold it's children, press `p`/`n` to jump to it's previous/next sibling branch. You may change these function keys in `body_js_for_tree_html`.
