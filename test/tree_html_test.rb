@@ -39,7 +39,7 @@ class TreeHtmlTest < Minitest::Test
     @a << @b << @c << @e
     @c << @g << @d << @f
     @d << @h
-    @h << @i << @j
+    @h << @i << @j << 'k'
   end
 
   def test_that_it_has_a_version_number
