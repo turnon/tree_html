@@ -1,4 +1,5 @@
 require "tree_html/version"
+require "cgi"
 
 module TreeHtml
 
@@ -11,7 +12,11 @@ module TreeHtml
 
   class ::Object
     def li_for_tree_html
-      "<li>#{NO_CHECKBOX}<a>#{to_s}</a></li>"
+      "<li>#{NO_CHECKBOX}<a>#{label_for_tree_html}</a></li>"
+    end
+
+    def label_for_tree_html
+      CGI::escapeHTML(to_s)
     end
   end
 

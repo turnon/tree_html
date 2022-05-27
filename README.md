@@ -20,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-In Node class, `include TreeHtml`, then implement `label_for_tree_html` and `children_for_tree_html`, then call `tree_html` on node object to get ul/li fragment, or `tree_html_full` to get a html file with pre-defined style.
+In Node class, `include TreeHtml`.
+
+Then implement `label_for_tree_html` and `children_for_tree_html` for Branch class, and `label_for_tree_html` for Leaf class.
+
+Finally, call `tree_html` on node object to get ul/li fragment, or `tree_html_full` to get a html file with pre-defined style.
 
 By Default, any object can be leaf, and renders as `to_s`.
 
