@@ -30,7 +30,13 @@ By Default, any object can be leaf, and renders as `to_s`.
 
 You may overwrite `data_for_tree_html`, `head_js_for_tree_html`, `body_js_for_tree_html`, `css_for_tree_html` to specify your own style.
 
-In generated html, hover a branch and press `f`/`u` to fold/unfold it's children, press `p`/`n` to jump to it's previous/next sibling branch. You may change these function keys in `body_js_for_tree_html`.
+In generated html, hover a branch and
+
+- press `f`/`u` to fold/unfold it's children
+- press `p`/`n` to jump to it's previous/next sibling branch
+- press `a` to print ascii tree in console
+
+You may change these function keys in `body_js_for_tree_html`.
 
 Or checkout [test/tree_html_test.rb](https://github.com/turnon/tree_html/blob/master/test/tree_html_test.rb) to see how to use.
 
